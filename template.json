@@ -1,0 +1,14 @@
+{
+  "subdomain": "myproject",
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "github": "janedoe",
+  "discord": "janedoe",
+  "project": "StudySync",
+  "description": "A web-based task manager for students that syncs with Google Calendar. Built with Next.js and Supabase. Currently in beta with 30 active users. Features include task prioritization, deadline reminders, and study session tracking.",
+  "purpose": "I need a clean, memorable URL to share with my beta users and include on my resume. A Mynd Domains subdomain gives my project a professional presence without the cost of a custom domain.",
+  "url": "https://studysync-beta.vercel.app",
+  "categories": ["productivity", "education", "web-app"],
+  "acceptedRules": true,
+  "joinedDiscord": true
+}

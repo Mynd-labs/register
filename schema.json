@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Mynd-labs/register/blob/main/schema.json",
+  "title": "Mynd Domains Subdomain Application",
+  "description": "Application for a Mynd Domains subdomain (yourname.mynd.my.id)",
+  "type": "object",
+  "required": [
+    "subdomain",
+    "name",
+    "email",
+    "github",
+    "discord",
+    "project",
+    "description",
+    "purpose",
+    "acceptedRules",
+    "joinedDiscord"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "subdomain": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$",
+      "minLength": 1,
+      "maxLength": 63,
+      "description": "The desired subdomain (e.g., 'myproject'). Must be lowercase alphanumeric with hyphens, 1-63 chars, RFC 1035 compliant."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100,
+      "description": "Your full name (first and last)."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "A valid email address where we can reach you."
+    },
+    "github": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$",
+      "description": "Your GitHub username (without @). Must match the PR author."
+    },
+    "discord": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 40,
+      "description": "Your Discord username. Must match a member of our server."
+    },
+    "project": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100,
+      "description": "The name of your project."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 2000,
+      "description": "A clear description of what you are building."
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 1000,
+      "description": "Why you need a Mynd Domains subdomain specifically."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "If your project is already live, link it here. (Optional)"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 30
+      },
+      "maxItems": 5,
+      "description": "Tags describing your project. Max 5. (Optional)"
+    },
+    "acceptedRules": {
+      "type": "boolean",
+      "enum": [true],
+      "description": "Must be true. Indicates you have read and accepted the rules in CONTRIBUTING.md."
+    },
+    "joinedDiscord": {
+      "type": "boolean",
+      "enum": [true],
+      "description": "Must be true. Indicates you have joined the Mynd Labs Discord server."
+    }
+  }
+}
