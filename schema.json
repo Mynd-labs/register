@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Mynd-labs/register/blob/main/schema.json",
   "title": "Mynd Domains Subdomain Application",
-  "description": "Application for a Mynd Domains subdomain (yourname.mynd.my.id)",
+  "description": "Application for a Mynd Domains subdomain (yourname.mynd.my.id or project.mynd.web.id)",
   "type": "object",
   "required": [
     "subdomain",
@@ -18,6 +18,12 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "domain": {
+      "type": "string",
+      "enum": ["mynd.my.id", "mynd.web.id"],
+      "default": "mynd.my.id",
+      "description": "Which zone the subdomain lives under: mynd.my.id for members (one per person), mynd.web.id for projects. Project applications must include details: the live URL if deployed, or the idea in the description. Applications predating this field are mynd.my.id member applications."
+    },
     "subdomain": {
       "type": "string",
       "pattern": "^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$",
