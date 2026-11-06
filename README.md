@@ -2,10 +2,21 @@
 
 > The official application registry for Mynd Domains subdomains.
 
-Every Mynd Domains subdomain (`yourname.mynd.my.id`) is requested through a
-Pull Request in this repository. There is no web form bypass, no email
-shortcut, and no exceptions — **a merged PR is the only way to receive a
-subdomain**.
+Every Mynd Domains subdomain is requested through a Pull Request in this
+repository. There is no web form bypass, no email shortcut, and no
+exceptions — **a merged PR is the only way to receive a subdomain**.
+
+We issue two kinds of subdomains:
+
+| Type | Domain | For |
+|---|---|---|
+| **Member** | `yourname.mynd.my.id` | You — your personal portfolio, blog, or profile. One per person. |
+| **Project** | `project.mynd.web.id` | A project you're building — an app, tool, open-source library, or community site. |
+
+Project applications (`mynd.web.id`) should include a few details about
+what the project is, plus its URL if it's deployed (or the idea, if not
+yet). Active subdomains are verified daily by our infrastructure to
+detect forgeries and misleading content.
 
 ---
 
